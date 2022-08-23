@@ -33,7 +33,7 @@ COMMENT "This is a enriched table with Sentiment added against each product revi
 TBLPROPERTIES ("quality" = "silver")
 AS
 select a.* , 
-detect_sentiment_udf(a.review_body) as sentiment -- Amazon Comprehend Sentiment API call
+db_detect_sentiment_udf(a.review_body) as sentiment -- Amazon Comprehend Detect Sentiment UDF call
 from STREAM(LIVE.bronze_customers_reviews) a
 WHERE a.year in (2000,2001,2002) and a.product_category = "Health_&_Personal_Care"
 

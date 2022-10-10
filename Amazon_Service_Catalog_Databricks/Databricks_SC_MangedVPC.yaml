@@ -145,20 +145,20 @@ Parameters:
     AllowedPattern: '^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$'
     MinLength: '36'
     Type: String
-    Default: 'ca6724f6-69a8-466e-a336-c70f82e557c6'
+    Default: {provide your Account id in string format}
     NoEcho: 'true'
   Username:
     Description: Account email for authenticating the REST API. Note that this value is case sensitive.Do not change the default value
     AllowedPattern: '^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$'
     ConstraintDescription: Must be a valid email format.
     Type: String
-    Default: 'cloudbuddy1983@gmail.com'
+    Default: {provide your Accounts Admin Username (email address) in string format}
     NoEcho: 'true'
   Password:
     Description: Account password for authenticating the REST API. The minimum length is 8 alphanumeric characters.Do not change the default value
     NoEcho: 'true'
     Type: String
-    Default: '23@Dmonica'
+    Default: {provide your Accounts Admin account password in string format}
   DBUser:
     Description: Email of primary user of the newly provisioned Databricks workspace
     AllowedPattern: '^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$'
